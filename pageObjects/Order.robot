@@ -10,32 +10,52 @@ Open Browser Chrome
     Open Browser        browser=chrome    url=${HOMEPAGE_URL}
 
 Verify Current Url Is Homepage Url
-    [Documentation]             Verify current url is homepage url
-    Location Should Be          ${HOMEPAGE_URL}
+    [Documentation]                 Verify current url is homepage url
+    Location Should Be              ${HOMEPAGE_URL}
 
 I am Order Printed Dress to Click Image Product
-    [Documentation]             I am Order Printed Dress to Click Image Product
-    Click Element               ${click_product}
+    [Documentation]                 I am Order Printed Dress to Click Image Product
+    Click Element                   ${click_product}
 
 I Click Button Add Cart to Order Printed Dress
-    [Documentation]             I Click Button Add Cart to Order Printed Dress
-    Click Element               ${add_cart}
+    [Documentation]                 I Click Button Add Cart to Order Printed Dress
+    Click Element                   ${add_cart}
 
 I am Continue Proceed to Checkout Order
-    [Documentation]             I am Continue Proceed to Checkout Order 
+    [Documentation]                 I am Continue Proceed to Checkout Order 
     Wait Until Element Is Visible   ${proceed_button}
     Click Element                   ${proceed_button}
-    
-    # Element Should Be Visible   ${cart_summary}
+    Element Should Be Visible       ${cart_summary}
 
 I am Proceed to Checkout Order from Cart Summary
-    [Documentation]             I am Proceed to Checkout Order from Cart Summary
-    Click Element               ${checkout_button}
-    Element Should Be Visible   ${order_step}
+    [Documentation]                 I am Proceed to Checkout Order from Cart Summary
+    Wait Until Element Is Visible   ${checkout_button}
+    Click Element                   ${checkout_button}
+    Element Should Be Visible       ${order_step}
 
 I am Authentication to Sign in 
-    [Documentation]             I am Authentication to Sign in 
-    Input Text                  ${email}                            membuatakunbaru@gmail.com
-    Input Text                  ${password}                         inipassword
-    Click Element               ${signin_button}
+    [Documentation]                 I am Authentication to Sign in 
+    Input Text                      ${email}                            membuatakunbaru@gmail.com
+    Input Text                      ${password}                         inipassword
+    Click Element                   ${signin_button}
 
+I am Select Delivery Address
+    [Documentation]                 I am Select Delivery Address
+    Click Element                   ${process_address}
+    Wait Until Element Is Visible   ${process_address}
+
+I Choose a Shipping Option
+    [Documentation]                 I Choose a Shipping Option
+    # Wait Until Element Is Visible   ${process_address}
+    Click Element                   ${checkbox}
+    Element Should Be Visible       ${process_carrier}
+    # Click Element                   ${process_carrier}
+    # Wait Until Element Is Visible   ${payment}
+
+I Choose Payment Method
+    [Documentation]                 I Choose Payment Method
+    Click Element                   ${payment}
+
+I Confirm My Order
+    [Documentation]                 I Confirm My Order
+    Click Element                   ${confirm_order}

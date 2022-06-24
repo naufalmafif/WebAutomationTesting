@@ -41,14 +41,6 @@ Verify Category Women Button Appears
     [Documentation]             Verify Category Women Button Appears
     Element Should Be Visible   ${categorywomen_button}
 
-Verify Category Dresses Button Appears
-    [Documentation]             Verify Category Dresses Button Appears
-    Element Should Be Visible   ${categorydresses_button}
-
-Verify Category T-shirt Button Appears
-    [Documentation]             Verify Category T-shirt Button Appears
-    Element Should Be Visible   ${categorytshirt_button}
-
 Verify Homepage Popular Tab Appears
     [Documentation]             Verify Homepage Popular Tab Appears
     Element Should Be Visible   ${tabpopular_button}

@@ -1,99 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220624 22:55:04.797" rpa="false" schemaversion="3">
-<suite id="s1" name="Homepage" source="F:\Dojobox\Demo\WebAutomationTesting\suites\homepage.robot">
-<test id="s1-t1" name="User Should Be Able To See Homepage." line="7">
-<kw name="Open Browser Chrome" library="Homepage" type="SETUP">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220625 00:35:37.194" rpa="false" schemaversion="3">
+<suite id="s1" name="Account" source="F:\Dojobox\Demo\WebAutomationTesting\suites\account.robot">
+<test id="s1-t1" name="User Should Be Able To See Account." line="7">
+<kw name="Open Browser Chrome" library="Account" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <arg>url=${HOMEPAGE_URL}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220624 22:55:05.188" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
-<status status="PASS" starttime="20220624 22:55:05.188" endtime="20220624 22:55:14.898"/>
+<msg timestamp="20220625 00:35:37.570" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20220625 00:35:37.569" endtime="20220625 00:35:45.790"/>
 </kw>
-<status status="PASS" starttime="20220624 22:55:05.187" endtime="20220624 22:55:14.899"/>
+<status status="PASS" starttime="20220625 00:35:37.569" endtime="20220625 00:35:45.790"/>
 </kw>
-<kw name="Verify Current Url Is Homepage Url" library="Homepage">
-<doc>Verify current url is homepage url</doc>
-<kw name="Location Should Be" library="SeleniumLibrary">
-<arg>${HOMEPAGE_URL}</arg>
-<doc>Verifies that the current URL is exactly ``url``.</doc>
-<msg timestamp="20220624 22:55:14.909" level="INFO">Current location is 'http://automationpractice.com/index.php'.</msg>
-<status status="PASS" starttime="20220624 22:55:14.901" endtime="20220624 22:55:14.909"/>
+<kw name="Click Button Sign In to Login" library="Account">
+<doc>Click Button Sign In to Login</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${signin_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220625 00:35:45.793" level="INFO">Clicking element '//*[@class="login"]'.</msg>
+<status status="PASS" starttime="20220625 00:35:45.792" endtime="20220625 00:35:48.417"/>
 </kw>
-<status status="PASS" starttime="20220624 22:55:14.899" endtime="20220624 22:55:14.910"/>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${authentication_login}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220625 00:35:48.432" level="INFO">Element '//*[@id="login_form"]' is displayed.</msg>
+<status status="PASS" starttime="20220625 00:35:48.417" endtime="20220625 00:35:48.432"/>
 </kw>
-<kw name="Verify Women button appears">
-<msg timestamp="20220624 22:55:14.920" level="FAIL">No keyword with name 'Verify Women button appears' found. Did you mean:
-    Homepage.Verify Category Women Button Appears</msg>
-<status status="FAIL" starttime="20220624 22:55:14.920" endtime="20220624 22:55:14.920"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${id_email}</arg>
+<arg>membuatakunbaru@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220625 00:35:48.448" level="INFO">Typing text 'membuatakunbaru@gmail.com' into text field '//*[@id="email"]'.</msg>
+<status status="PASS" starttime="20220625 00:35:48.432" endtime="20220625 00:35:48.623"/>
 </kw>
-<kw name="Verify Homepage Header Appears" library="Homepage">
-<doc>Verify Homepage Header Appears</doc>
-<status status="NOT RUN" starttime="20220624 22:55:14.921" endtime="20220624 22:55:14.921"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${id_password}</arg>
+<arg>inipassword</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220625 00:35:48.624" level="INFO">Typing text 'inipassword' into text field '//*[@id="passwd"]'.</msg>
+<status status="PASS" starttime="20220625 00:35:48.623" endtime="20220625 00:35:48.765"/>
 </kw>
-<kw name="Verify Contact Us Button Appears" library="Homepage">
-<doc>Verify Homepage Contact Us Button Appears</doc>
-<status status="NOT RUN" starttime="20220624 22:55:14.923" endtime="20220624 22:55:14.923"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${id_submitLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220625 00:35:48.765" level="INFO">Clicking element '//*[@id="SubmitLogin"]'.</msg>
+<status status="PASS" starttime="20220625 00:35:48.765" endtime="20220625 00:35:59.153"/>
 </kw>
-<kw name="Verify Sign in Button Appears" library="Homepage">
-<doc>Verify Homepage Sign in Button Appears</doc>
-<status status="NOT RUN" starttime="20220624 22:55:14.924" endtime="20220624 22:55:14.924"/>
+<status status="PASS" starttime="20220625 00:35:45.791" endtime="20220625 00:35:59.153"/>
 </kw>
-<kw name="Verify Homepage Title Logo Appears" library="Homepage">
-<doc>Verify homepage title appears</doc>
-<status status="NOT RUN" starttime="20220624 22:55:14.924" endtime="20220624 22:55:14.924"/>
+<kw name="Click View Info My Orders" library="Account">
+<doc>Click View Info My Orders</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${info_orders}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220625 00:35:59.156" level="INFO">Clicking element '//*[@title="Orders"]'.</msg>
+<status status="PASS" starttime="20220625 00:35:59.155" endtime="20220625 00:36:02.677"/>
 </kw>
-<kw name="Verify Search Button Appears" library="Homepage">
-<doc>Verify Homepage Search Button Appears</doc>
-<status status="NOT RUN" starttime="20220624 22:55:14.925" endtime="20220624 22:55:14.925"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${back_account}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220625 00:36:02.678" level="INFO">Clicking element '//*[@class="icon-chevron-left"]'.</msg>
+<status status="PASS" starttime="20220625 00:36:02.678" endtime="20220625 00:36:05.606"/>
 </kw>
-<kw name="Verify Cart Button Appears" library="Homepage">
-<doc>Verify Cart Button Appears</doc>
-<status status="NOT RUN" starttime="20220624 22:55:14.925" endtime="20220624 22:55:14.925"/>
+<status status="PASS" starttime="20220625 00:35:59.154" endtime="20220625 00:36:05.607"/>
 </kw>
-<kw name="Verify Category Women Button Appears" library="Homepage">
-<doc>Verify Category Women Button Appears</doc>
-<status status="NOT RUN" starttime="20220624 22:55:14.926" endtime="20220624 22:55:14.926"/>
+<kw name="Click View Info My Wishlists" library="Account">
+<doc>Click View Info My Wishlists</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${info_wishlist}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220625 00:36:05.609" level="INFO">Clicking element '//*[@title="My wishlists"]'.</msg>
+<status status="PASS" starttime="20220625 00:36:05.609" endtime="20220625 00:36:10.696"/>
 </kw>
-<kw name="Verify Category Dresses Button Appears" library="Homepage">
-<doc>Verify Category Dresses Button Appears</doc>
-<status status="NOT RUN" starttime="20220624 22:55:14.927" endtime="20220624 22:55:14.927"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${id_name}</arg>
+<arg>favorite items</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220625 00:36:10.697" level="INFO">Typing text 'favorite items' into text field '//*[@id="name"]'.</msg>
+<status status="PASS" starttime="20220625 00:36:10.696" endtime="20220625 00:36:10.819"/>
 </kw>
-<kw name="Verify Category T-shirt Button Appears" library="Homepage">
-<doc>Verify Category T-shirt Button Appears</doc>
-<status status="NOT RUN" starttime="20220624 22:55:14.927" endtime="20220624 22:55:14.927"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${id_submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220625 00:36:10.820" level="INFO">Clicking element '//*[@id="submitWishlist"]'.</msg>
+<status status="PASS" starttime="20220625 00:36:10.820" endtime="20220625 00:36:15.613"/>
 </kw>
-<kw name="Verify Homepage Popular Tab Appears" library="Homepage">
-<doc>Verify Homepage Popular Tab Appears</doc>
-<status status="NOT RUN" starttime="20220624 22:55:14.928" endtime="20220624 22:55:14.928"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${back_account}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220625 00:36:15.614" level="INFO">Clicking element '//*[@class="icon-chevron-left"]'.</msg>
+<status status="PASS" starttime="20220625 00:36:15.613" endtime="20220625 00:36:16.826"/>
 </kw>
-<kw name="Verify Homepage Best Seller Tab Appears" library="Homepage">
-<doc>Verify Homepage Best Seller Tab Appears</doc>
-<status status="NOT RUN" starttime="20220624 22:55:14.928" endtime="20220624 22:55:14.929"/>
+<status status="PASS" starttime="20220625 00:36:05.608" endtime="20220625 00:36:16.826"/>
 </kw>
-<kw name="Verify Homepage Footer Appears" library="Homepage">
-<doc>Verify Homepage Footer Appears</doc>
-<status status="NOT RUN" starttime="20220624 22:55:14.929" endtime="20220624 22:55:14.929"/>
+<kw name="Click View Info My Credit Slips" library="Account">
+<doc>Click View Info My Credit Slips</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${info_creditSlip}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220625 00:36:16.828" level="INFO">Clicking element '//*[@title="Credit slips"]'.</msg>
+<status status="PASS" starttime="20220625 00:36:16.828" endtime="20220625 00:36:17.931"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${back_account}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220625 00:36:17.931" level="INFO">Clicking element '//*[@class="icon-chevron-left"]'.</msg>
+<status status="PASS" starttime="20220625 00:36:17.931" endtime="20220625 00:36:19.710"/>
+</kw>
+<status status="PASS" starttime="20220625 00:36:16.827" endtime="20220625 00:36:19.710"/>
+</kw>
+<kw name="Click View Info My Addresses" library="Account">
+<doc>Click View Info My Addresses</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${info_address}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220625 00:36:19.712" level="INFO">Clicking element '//*[@title="Addresses"]'.</msg>
+<status status="PASS" starttime="20220625 00:36:19.712" endtime="20220625 00:36:21.935"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${back_account}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220625 00:36:21.936" level="INFO">Clicking element '//*[@class="icon-chevron-left"]'.</msg>
+<status status="PASS" starttime="20220625 00:36:21.935" endtime="20220625 00:36:23.694"/>
+</kw>
+<status status="PASS" starttime="20220625 00:36:19.711" endtime="20220625 00:36:23.694"/>
+</kw>
+<kw name="Click View Info My Personal Information" library="Account">
+<doc>Click View Info My Personal Information</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${info_personal}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220625 00:36:23.697" level="INFO">Clicking element '//*[@title="Information"]'.</msg>
+<status status="PASS" starttime="20220625 00:36:23.697" endtime="20220625 00:36:26.118"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${back_account}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220625 00:36:26.118" level="INFO">Clicking element '//*[@class="icon-chevron-left"]'.</msg>
+<status status="PASS" starttime="20220625 00:36:26.118" endtime="20220625 00:36:27.188"/>
+</kw>
+<status status="PASS" starttime="20220625 00:36:23.696" endtime="20220625 00:36:27.188"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220624 22:55:14.930" endtime="20220624 22:55:17.213"/>
+<status status="PASS" starttime="20220625 00:36:27.189" endtime="20220625 00:36:29.507"/>
 </kw>
-<doc>Test to verify that user should be able to see homepage</doc>
-<status status="FAIL" starttime="20220624 22:55:05.186" endtime="20220624 22:55:17.213">No keyword with name 'Verify Women button appears' found. Did you mean:
-    Homepage.Verify Category Women Button Appears</status>
+<doc>Test to verify that user should be able to see Account</doc>
+<status status="PASS" starttime="20220625 00:35:37.567" endtime="20220625 00:36:29.508"/>
 </test>
-<doc>Homepage test cases</doc>
-<status status="FAIL" starttime="20220624 22:55:04.797" endtime="20220624 22:55:17.217"/>
+<doc>Account test cases</doc>
+<status status="PASS" starttime="20220625 00:35:37.194" endtime="20220625 00:36:29.511"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Homepage">Homepage</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Account">Account</stat>
 </suite>
 </statistics>
 <errors>

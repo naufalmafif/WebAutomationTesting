@@ -12,5 +12,8 @@ User Should Be Able To See Order.
     I am Continue Proceed to Checkout Order
     I am Proceed to Checkout Order from Cart Summary
     I am Authentication to Sign in 
-
+    I am Select Delivery Address
+    I Choose a Shipping Option
+    I Choose Payment Method
+    I Confirm My Order
     [Teardown]            Close Browser
