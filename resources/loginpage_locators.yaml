@@ -1,0 +1,6 @@
+signin_button: //*[@class="login"]
+authentication_login: //*[@id="login_form"]
+id_email: //*[@id="email"]
+id_password: //*[@id="passwd"]
+id_submitLogin: //*[@id="SubmitLogin"]
+info_akun: //*[@class="info-account"]

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220624 22:55:04.797" rpa="false" schemaversion="3">
+<suite id="s1" name="Homepage" source="F:\Dojobox\Demo\WebAutomationTesting\suites\homepage.robot">
+<test id="s1-t1" name="User Should Be Able To See Homepage." line="7">
+<kw name="Open Browser Chrome" library="Homepage" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<arg>url=${HOMEPAGE_URL}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220624 22:55:05.188" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20220624 22:55:05.188" endtime="20220624 22:55:14.898"/>
+</kw>
+<status status="PASS" starttime="20220624 22:55:05.187" endtime="20220624 22:55:14.899"/>
+</kw>
+<kw name="Verify Current Url Is Homepage Url" library="Homepage">
+<doc>Verify current url is homepage url</doc>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${HOMEPAGE_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220624 22:55:14.909" level="INFO">Current location is 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20220624 22:55:14.901" endtime="20220624 22:55:14.909"/>
+</kw>
+<status status="PASS" starttime="20220624 22:55:14.899" endtime="20220624 22:55:14.910"/>
+</kw>
+<kw name="Verify Women button appears">
+<msg timestamp="20220624 22:55:14.920" level="FAIL">No keyword with name 'Verify Women button appears' found. Did you mean:
+    Homepage.Verify Category Women Button Appears</msg>
+<status status="FAIL" starttime="20220624 22:55:14.920" endtime="20220624 22:55:14.920"/>
+</kw>
+<kw name="Verify Homepage Header Appears" library="Homepage">
+<doc>Verify Homepage Header Appears</doc>
+<status status="NOT RUN" starttime="20220624 22:55:14.921" endtime="20220624 22:55:14.921"/>
+</kw>
+<kw name="Verify Contact Us Button Appears" library="Homepage">
+<doc>Verify Homepage Contact Us Button Appears</doc>
+<status status="NOT RUN" starttime="20220624 22:55:14.923" endtime="20220624 22:55:14.923"/>
+</kw>
+<kw name="Verify Sign in Button Appears" library="Homepage">
+<doc>Verify Homepage Sign in Button Appears</doc>
+<status status="NOT RUN" starttime="20220624 22:55:14.924" endtime="20220624 22:55:14.924"/>
+</kw>
+<kw name="Verify Homepage Title Logo Appears" library="Homepage">
+<doc>Verify homepage title appears</doc>
+<status status="NOT RUN" starttime="20220624 22:55:14.924" endtime="20220624 22:55:14.924"/>
+</kw>
+<kw name="Verify Search Button Appears" library="Homepage">
+<doc>Verify Homepage Search Button Appears</doc>
+<status status="NOT RUN" starttime="20220624 22:55:14.925" endtime="20220624 22:55:14.925"/>
+</kw>
+<kw name="Verify Cart Button Appears" library="Homepage">
+<doc>Verify Cart Button Appears</doc>
+<status status="NOT RUN" starttime="20220624 22:55:14.925" endtime="20220624 22:55:14.925"/>
+</kw>
+<kw name="Verify Category Women Button Appears" library="Homepage">
+<doc>Verify Category Women Button Appears</doc>
+<status status="NOT RUN" starttime="20220624 22:55:14.926" endtime="20220624 22:55:14.926"/>
+</kw>
+<kw name="Verify Category Dresses Button Appears" library="Homepage">
+<doc>Verify Category Dresses Button Appears</doc>
+<status status="NOT RUN" starttime="20220624 22:55:14.927" endtime="20220624 22:55:14.927"/>
+</kw>
+<kw name="Verify Category T-shirt Button Appears" library="Homepage">
+<doc>Verify Category T-shirt Button Appears</doc>
+<status status="NOT RUN" starttime="20220624 22:55:14.927" endtime="20220624 22:55:14.927"/>
+</kw>
+<kw name="Verify Homepage Popular Tab Appears" library="Homepage">
+<doc>Verify Homepage Popular Tab Appears</doc>
+<status status="NOT RUN" starttime="20220624 22:55:14.928" endtime="20220624 22:55:14.928"/>
+</kw>
+<kw name="Verify Homepage Best Seller Tab Appears" library="Homepage">
+<doc>Verify Homepage Best Seller Tab Appears</doc>
+<status status="NOT RUN" starttime="20220624 22:55:14.928" endtime="20220624 22:55:14.929"/>
+</kw>
+<kw name="Verify Homepage Footer Appears" library="Homepage">
+<doc>Verify Homepage Footer Appears</doc>
+<status status="NOT RUN" starttime="20220624 22:55:14.929" endtime="20220624 22:55:14.929"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220624 22:55:14.930" endtime="20220624 22:55:17.213"/>
+</kw>
+<doc>Test to verify that user should be able to see homepage</doc>
+<status status="FAIL" starttime="20220624 22:55:05.186" endtime="20220624 22:55:17.213">No keyword with name 'Verify Women button appears' found. Did you mean:
+    Homepage.Verify Category Women Button Appears</status>
+</test>
+<doc>Homepage test cases</doc>
+<status status="FAIL" starttime="20220624 22:55:04.797" endtime="20220624 22:55:17.217"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Homepage">Homepage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
