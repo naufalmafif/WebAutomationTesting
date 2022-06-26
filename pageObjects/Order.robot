@@ -46,11 +46,9 @@ I am Select Delivery Address
 
 I Choose a Shipping Option
     [Documentation]                 I Choose a Shipping Option
-    # Wait Until Element Is Visible   ${process_address}
+    
     Click Element                   ${checkbox}
     Element Should Be Visible       ${process_carrier}
-    # Click Element                   ${process_carrier}
-    # Wait Until Element Is Visible   ${payment}
 
 I Choose Payment Method
     [Documentation]                 I Choose Payment Method
