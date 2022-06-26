@@ -1,0 +1,7 @@
+contactus_button: //*[@title="Contact Us"]
+id_contact: //*[@id="id_contact"]
+id_email: //*[@id="email"]
+id_order: //*[@id="id_order"]
+id_fileupload: //*[@id="uniform-fileUpload"]
+id_message: //*[@id="message"]
+id_submitmsg: //*[@id="submitMessage"]
