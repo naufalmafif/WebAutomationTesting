@@ -19,8 +19,8 @@ Click Button Contact Us Menu
 
 Choose Subject Heading Contact
     [Documentation]                 Choose Subject Heading Contact
-    Select From List By Index       ${id_contact}               2
-
+    Select From List By Index       ${id_contact}               1
+    
 Input Email Address Form
     [Documentation]                 Input Email Address Form
     Input Text                      ${id_email}                 membuatakunbaru@gmail.com
@@ -29,7 +29,6 @@ Input Order Reference Form
     [Documentation]                 Input Order Reference Form
     Input Text                      ${id_order}                 UEYQJPPMN
 
-//Choose Attach File Button Error tidak dapat menampilkan path file
 Choose Attach File 
     [Documentation]                 Choose Attach File
     Choose File                     ${id_fileupload}            ../resources/files/IN219748.pdf
