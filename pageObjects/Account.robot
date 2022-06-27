@@ -4,6 +4,19 @@ Variables             ../resources/accountpage_locators.yaml
 
 *** Variables ***
 ${HOMEPAGE_URL}     http://automationpractice.com/index.php
+${email}            membuatakunbaru@gmail.com
+${password}         inipassword
+${name}             favorite items
+${firstname}        joni
+${lastname}         yes papa
+${address}          Sukatani barat utara selatan 
+${city}             Bandung
+${state}            16
+${postcode}         41854
+${country}          0
+${hp}               0214122181
+${pm}               0848784852
+${alias}            Apartement
 
 *** Keywords ***
 Open Browser Chrome
@@ -17,8 +30,8 @@ Click Button Sign In to Login
     [Documentation]                 Click Button Sign In to Login
     Click Element                   ${signin_button}
     Element Should Be Visible       ${authentication_login}
-    Input Text                      ${id_email}                             membuatakunbaru@gmail.com
-    Input Text                      ${id_password}                          inipassword
+    Input Text                      ${id_email}                             ${email}
+    Input Text                      ${id_password}                          ${password}
     Click Element                   ${id_submitLogin}
 
 Click View Info My Orders
@@ -29,7 +42,7 @@ Click View Info My Orders
 Click View Info My Wishlists
     [Documentation]                 Click View Info My Wishlists
     Click Element                   ${info_wishlist}
-    Input Text                      ${id_name}                              favorite items
+    Input Text                      ${id_name}                              ${name}
     Click Element                   ${id_submit}
     Click Element                   ${back_account}
 
@@ -41,27 +54,32 @@ Click View Info My Credit Slips
 Click View Info My Addresses
     [Documentation]                 Click View Info My Addresses
     Click Element                   ${info_address}
-   
+
+Click Add Address
+    Click Element                   ${add_address}
+    Input Text                      ${id_firstname}                         ${firstname}
+    Click Element                   ${save_button}
+
 Click Update Addresses
     [Documentation]                 Click Update Addresses
     Click Element                   ${update_address}
     Wait Until Element Is Visible   ${id_firstname}
-    Input Text                      ${id_firstname}                tani
-    Input Text                      ${id_address}                  Sukatani barat utara selatan 
-    Input Text                      ${id_city}                     Bandung
-    Select From List By Index       ${id_state}                    16
-    Input Text                      ${id_postcode}                 10510
-    Select From List By Index       ${id_country}                  0
-    Input Text                      ${id_hp}                       0214122181
-    Input Text                      ${id_pm}                       08128161611
-    Input Text                      ${id_alias}                    Apartement
+    Input Text                      ${id_firstname}                ${firstname}
+    Input Text                      ${id_address}                  ${address}
+    Input Text                      ${id_city}                     ${city}
+    Select From List By Index       ${id_state}                    ${state}
+    Input Text                      ${id_postcode}                 ${postcode}
+    Select From List By Index       ${id_country}                  ${country}
+    Input Text                      ${id_hp}                       ${hp}
+    Input Text                      ${id_pm}                       ${pm}
+    Input Text                      ${id_alias}                    ${alias}
     Click Element                   ${save_button}
     Click Element                   ${back_account}
 
 Click View Info My Personal Information 
     [Documentation]                 Click View Info My Personal Information
     Click Element                   ${info_personal}
-    Input Text                      ${id_firstname}                Akuncoba
-    Input Text                      ${id_lastname}                 barusan
+    Input Text                      ${id_firstname}                ${firstname}
+    Input Text                      ${id_lastname}                 ${lastname}
     Click Element                   ${back_account}
 
