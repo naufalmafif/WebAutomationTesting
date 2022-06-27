@@ -21,6 +21,7 @@ ${alias}            Apartement
 *** Keywords ***
 Open Browser Chrome
     Open Browser        browser=chrome    url=${HOMEPAGE_URL}
+    Maximize Browser Window
 
 Verify Current Url Is Homepage Url
     [Documentation]                 Verify current url is homepage url
@@ -56,6 +57,7 @@ Click View Info My Addresses
     Click Element                   ${info_address}
 
 Click Add Address
+    [Documentation]                 Click Add Address
     Click Element                   ${add_address}
     Input Text                      ${id_firstname}                         ${firstname}
     Click Element                   ${save_button}

@@ -4,10 +4,13 @@ Variables             ../resources/orderpage_locators.yaml
 
 *** Variables ***
 ${HOMEPAGE_URL}     http://automationpractice.com/index.php
+${email}            membuatakunbaru@gmail.com
+${password}         inipassword
 
 *** Keywords ***
 Open Browser Chrome
     Open Browser        browser=chrome    url=${HOMEPAGE_URL}
+    Maximize Browser Window
 
 Verify Current Url Is Homepage Url
     [Documentation]                 Verify current url is homepage url
@@ -35,8 +38,8 @@ I am Proceed to Checkout Order from Cart Summary
 
 I am Authentication to Sign in 
     [Documentation]                 I am Authentication to Sign in 
-    Input Text                      ${email}                            membuatakunbaru@gmail.com
-    Input Text                      ${password}                         inipassword
+    Input Text                      ${email}                            ${email}
+    Input Text                      ${password}                         ${password}
     Click Element                   ${signin_button}
 
 I am Select Delivery Address

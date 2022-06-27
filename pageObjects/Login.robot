@@ -4,10 +4,13 @@ Variables             ../resources/loginpage_locators.yaml
 
 *** Variables ***
 ${HOMEPAGE_URL}     http://automationpractice.com/index.php
+${email}            membuatakunbaru@gmail.com
+${password}         inipassword
 
 *** Keywords ***
 Open Browser Chrome
     Open Browser        browser=chrome    url=${HOMEPAGE_URL}
+    Maximize Browser Window
 
 Verify Current Url Is Homepage Url
     [Documentation]             Verify current url is homepage url
@@ -20,11 +23,11 @@ I Click Button Sign In to Login
 
 I am Typing Email address in the Field Signin Form
     [Documentation]             I am Typing Email address in the Field Signin Form
-    Input Text                  ${id_email}                             membuatakunbaru@gmail.com
+    Input Text                  ${id_email}                             ${email}
 
 I am Typing Password address in the Field Signin Form
     [Documentation]             I am Typing Email address in the Field Signin Form
-    Input Text                  ${id_password}                          inipassword
+    Input Text                  ${id_password}                          ${password}
 
 I Click Button Login 
     [Documentation]             I Click Button Login

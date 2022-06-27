@@ -1,108 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220627 12:08:19.160" rpa="false" schemaversion="3">
-<suite id="s1" name="Contactus" source="F:\Dojobox\Demo\WebAutomationTesting\suites\contactus.robot">
-<test id="s1-t1" name="User Should Be Able To See Contact Us." line="7">
-<kw name="Open Browser Chrome" library="ContactUs" type="SETUP">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220627 18:57:24.120" rpa="false" schemaversion="3">
+<suite id="s1" name="Account" source="F:\Dojobox\Demo\WebAutomationTesting\suites\account.robot">
+<test id="s1-t1" name="User Should Be Able To See Account." line="7">
+<kw name="Open Browser Chrome" library="Account" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <arg>url=${HOMEPAGE_URL}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220627 12:08:19.790" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
-<status status="PASS" starttime="20220627 12:08:19.789" endtime="20220627 12:08:26.974"/>
+<msg timestamp="20220627 18:57:24.644" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20220627 18:57:24.644" endtime="20220627 18:57:51.269"/>
 </kw>
-<status status="PASS" starttime="20220627 12:08:19.788" endtime="20220627 12:08:26.974"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220627 18:57:51.270" endtime="20220627 18:57:51.434"/>
 </kw>
-<kw name="Click Button Contact Us Menu" library="ContactUs">
-<doc>Click Button Contact Us Menu</doc>
+<status status="PASS" starttime="20220627 18:57:24.644" endtime="20220627 18:57:51.435"/>
+</kw>
+<kw name="Click Button Sign In to Login" library="Account">
+<doc>Click Button Sign In to Login</doc>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${contactus_button}</arg>
+<arg>${signin_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220627 12:08:26.978" level="INFO">Clicking element '//*[@title="Contact Us"]'.</msg>
-<status status="PASS" starttime="20220627 12:08:26.977" endtime="20220627 12:08:29.547"/>
+<msg timestamp="20220627 18:57:51.439" level="INFO">Clicking element '//*[@class="login"]'.</msg>
+<status status="PASS" starttime="20220627 18:57:51.438" endtime="20220627 18:58:05.438"/>
 </kw>
-<status status="PASS" starttime="20220627 12:08:26.976" endtime="20220627 12:08:29.547"/>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${authentication_login}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220627 18:58:05.465" level="INFO">Element '//*[@id="login_form"]' is displayed.</msg>
+<status status="PASS" starttime="20220627 18:58:05.438" endtime="20220627 18:58:05.465"/>
 </kw>
-<kw name="Choose Attach File" library="ContactUs">
-<doc>Choose Attach File</doc>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>${id_fileupload}</arg>
-<arg>../assets/IN219748.pdf</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20220627 12:08:29.550" level="INFO">Sending F:\Dojobox\Demo\WebAutomationTesting\assets\IN219748.pdf to browser.</msg>
-<msg timestamp="20220627 12:08:29.724" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-143.png"&gt;&lt;img src="selenium-screenshot-143.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220627 12:08:29.725" level="FAIL">WebDriverException: Message: unknown error: path is not absolute: ../assets/IN219748.pdf
-  (Session info: chrome=102.0.5005.115)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x00EFD953+2414931]
-	Ordinal0 [0x00E8F5E1+1963489]
-	Ordinal0 [0x00D7C6B8+837304]
-	Ordinal0 [0x00D831FC+864764]
-	Ordinal0 [0x00DA3544+996676]
-	Ordinal0 [0x00DC449C+1131676]
-	Ordinal0 [0x00D9FC74+982132]
-	Ordinal0 [0x00DC46B4+1132212]
-	Ordinal0 [0x00DD4812+1198098]
-	Ordinal0 [0x00DC42B6+1131190]
-	Ordinal0 [0x00D9E860+976992]
-	Ordinal0 [0x00D9F756+980822]
-	GetHandleVerifier [0x0116CC62+2510274]
-	GetHandleVerifier [0x0115F760+2455744]
-	GetHandleVerifier [0x00F8EABA+551962]
-	GetHandleVerifier [0x00F8D916+547446]
-	Ordinal0 [0x00E95F3B+1990459]
-	Ordinal0 [0x00E9A898+2009240]
-	Ordinal0 [0x00E9A985+2009477]
-	Ordinal0 [0x00EA3AD1+2046673]
-	BaseThreadInitThunk [0x76ECFA29+25]
-	RtlGetAppContainerNamedObjectPath [0x77537A9E+286]
-	RtlGetAppContainerNamedObjectPath [0x77537A6E+238]
-</msg>
-<status status="FAIL" starttime="20220627 12:08:29.549" endtime="20220627 12:08:29.728"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${id_email}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220627 18:58:05.465" level="INFO">Typing text 'membuatakunbaru@gmail.com' into text field '//*[@id="email"]'.</msg>
+<status status="PASS" starttime="20220627 18:58:05.465" endtime="20220627 18:58:05.713"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${id_fileupload}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20220627 12:08:29.728" endtime="20220627 12:08:29.729"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${id_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220627 18:58:05.714" level="INFO">Typing text 'inipassword' into text field '//*[@id="passwd"]'.</msg>
+<status status="PASS" starttime="20220627 18:58:05.713" endtime="20220627 18:58:05.868"/>
 </kw>
-<status status="FAIL" starttime="20220627 12:08:29.548" endtime="20220627 12:08:29.729"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${id_submitLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220627 18:58:05.869" level="INFO">Clicking element '//*[@id="SubmitLogin"]'.</msg>
+<status status="PASS" starttime="20220627 18:58:05.868" endtime="20220627 18:58:19.424"/>
+</kw>
+<status status="PASS" starttime="20220627 18:57:51.437" endtime="20220627 18:58:19.424"/>
+</kw>
+<kw name="Click View Info My Orders" library="Account">
+<doc>Click View Info My Orders</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${info_orders}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220627 18:58:19.426" level="INFO">Clicking element '//*[@title="Orders"]'.</msg>
+<status status="PASS" starttime="20220627 18:58:19.426" endtime="20220627 18:58:29.632"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${back_account}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220627 18:58:29.632" level="INFO">Clicking element '//*[@class="icon-chevron-left"]'.</msg>
+<status status="PASS" starttime="20220627 18:58:29.632" endtime="20220627 18:58:33.539"/>
+</kw>
+<status status="PASS" starttime="20220627 18:58:19.425" endtime="20220627 18:58:33.540"/>
+</kw>
+<kw name="Click View Info My Wishlists" library="Account">
+<doc>Click View Info My Wishlists</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${info_wishlist}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220627 18:58:33.546" level="INFO">Clicking element '//*[@title="My wishlists"]'.</msg>
+<msg timestamp="20220627 18:58:33.736" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-168.png"&gt;&lt;img src="selenium-screenshot-168.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220627 18:58:33.736" level="FAIL">Element with locator '//*[@title="My wishlists"]' not found.</msg>
+<status status="FAIL" starttime="20220627 18:58:33.545" endtime="20220627 18:58:33.739"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${id_name}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220627 18:58:33.739" endtime="20220627 18:58:33.739"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${id_submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220627 18:58:33.739" endtime="20220627 18:58:33.739"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${back_account}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220627 18:58:33.739" endtime="20220627 18:58:33.739"/>
+</kw>
+<status status="FAIL" starttime="20220627 18:58:33.543" endtime="20220627 18:58:33.741"/>
+</kw>
+<kw name="Click View Info My Credit Slips" library="Account">
+<doc>Click View Info My Credit Slips</doc>
+<status status="NOT RUN" starttime="20220627 18:58:33.741" endtime="20220627 18:58:33.741"/>
+</kw>
+<kw name="Click View Info My Addresses" library="Account">
+<doc>Click View Info My Addresses</doc>
+<status status="NOT RUN" starttime="20220627 18:58:33.744" endtime="20220627 18:58:33.744"/>
+</kw>
+<kw name="Click Add Address" library="Account">
+<doc>Click Add Address</doc>
+<status status="NOT RUN" starttime="20220627 18:58:33.744" endtime="20220627 18:58:33.744"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220627 12:08:29.731" endtime="20220627 12:08:32.145"/>
+<status status="PASS" starttime="20220627 18:58:33.745" endtime="20220627 18:58:35.961"/>
 </kw>
-<doc>Test to verify that user should be able to see Contact Us</doc>
-<status status="FAIL" starttime="20220627 12:08:19.787" endtime="20220627 12:08:32.146">WebDriverException: Message: unknown error: path is not absolute: ../assets/IN219748.pdf
-  (Session info: chrome=102.0.5005.115)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x00EFD953+2414931]
-	Ordinal0 [0x00E8F5E1+1963489]
-	Ordinal0 [0x00D7C6B8+837304]
-	Ordinal0 [0x00D831FC+864764]
-	Ordinal0 [0x00DA3544+996676]
-	Ordinal0 [0x00DC449C+1131676]
-	Ordinal0 [0x00D9FC74+982132]
-	Ordinal0 [0x00DC46B4+1132212]
-	Ordinal0 [0x00DD4812+1198098]
-	Ordinal0 [0x00DC42B6+1131190]
-	Ordinal0 [0x00D9E860+976992]
-	Ordinal0 [0x00D9F756+980822]
-	GetHandleVerifier [0x0116CC62+2510274]
-	GetHandleVerifier [0x0115F760+2455744]
-	GetHandleVerifier [0x00F8EABA+551962]
-	GetHandleVerifier [0x00F8D916+547446]
-	Ordinal0 [0x00E95F3B+1990459]
-	Ordinal0 [0x00E9A898+2009240]
-	Ordinal0 [0x00E9A985+2009477]
-	Ordinal0 [0x00EA3AD1+2046673]
-	BaseThreadInitThunk [0x76ECFA29+25]
-	RtlGetAppContainerNamedObjectPath [0x77537A9E+286]
-	RtlGetAppContainerNamedObjectPath [0x77537A6E+238]
-</status>
+<doc>Test to verify that user should be able to see Account</doc>
+<status status="FAIL" starttime="20220627 18:57:24.643" endtime="20220627 18:58:35.962">Element with locator '//*[@title="My wishlists"]' not found.</status>
 </test>
-<doc>Contact Us test cases</doc>
-<status status="FAIL" starttime="20220627 12:08:19.164" endtime="20220627 12:08:32.153"/>
+<doc>Account test cases</doc>
+<status status="FAIL" starttime="20220627 18:57:24.120" endtime="20220627 18:58:35.966"/>
 </suite>
 <statistics>
 <total>
@@ -111,7 +125,7 @@ Backtrace:
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Contactus">Contactus</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Account">Account</stat>
 </suite>
 </statistics>
 <errors>

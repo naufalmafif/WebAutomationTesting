@@ -8,6 +8,7 @@ ${HOMEPAGE_URL}     http://automationpractice.com/index.php
 *** Keywords ***
 Open Browser Chrome
     Open Browser        browser=chrome    url=${HOMEPAGE_URL}
+    Maximize Browser Window
 
 Verify Current Url Is Homepage Url
     [Documentation]             Verify current url is homepage url

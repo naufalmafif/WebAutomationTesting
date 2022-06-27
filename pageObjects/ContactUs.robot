@@ -13,6 +13,7 @@ ${success_message}  Your message has been successfully sent to our team.
 *** Keywords ***
 Open Browser Chrome
     Open Browser                    browser=chrome    url=${HOMEPAGE_URL}
+    Maximize Browser Window
 
 Verify Current Url Is Homepage Url
     [Documentation]                 Verify current url is homepage url
@@ -23,11 +24,11 @@ Click Button Contact Us Menu
     Click Element                   ${contactus_button}
 
 Verify Contact Us Title Appears
-    Element Should Be Visible               ${contact_us_title}
+    Element Should Be Visible       ${contact_us_title}
 
 Verify Contact Us Subtitle Appears
-    Element Should Be Visible               ${contact_us_subtitle}
-    
+    Element Should Be Visible       ${contact_us_subtitle}
+
 Choose Subject Heading Contact
     [Documentation]                 Choose Subject Heading Contact
     Select From List By Index       ${id_contact}               1
