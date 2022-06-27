@@ -7,7 +7,6 @@ Resource            ../pageObjects/Homepage.robot
 User Should Be Able To See Homepage.
     [Documentation]       Test to verify that user should be able to see homepage
     [Setup]               Open Browser Chrome
-
     Verify Current Url Is Homepage Url
     Verify Homepage Header Appears
     Verify Contact Us Button Appears
@@ -19,5 +18,4 @@ User Should Be Able To See Homepage.
     Verify Homepage Popular Tab Appears
     Verify Homepage Best Seller Tab Appears
     Verify Homepage Footer Appears
-
     [Teardown]            Close Browser

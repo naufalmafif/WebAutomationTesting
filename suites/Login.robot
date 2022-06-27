@@ -11,6 +11,4 @@ User Should Be Able To See Login.
     I am Typing Email address in the Field Signin Form
     I am Typing Password address in the Field Signin Form
     I Click Button Login 
-
-
     [Teardown]            Close Browser
