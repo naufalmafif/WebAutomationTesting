@@ -11,7 +11,8 @@ User Should Be Able To See Contact Us.
     Choose Subject Heading Contact
     Input Email Address Form
     Input Order Reference Form
-    # Choose Attach File 
+    Choose Attach File 
     Input Message 
     Click Button Send
+    Verify Success Status
     [Teardown]            Close Browser
