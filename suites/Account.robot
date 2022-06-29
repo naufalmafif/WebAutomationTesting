@@ -12,7 +12,7 @@ User Should Be Able To See Account.
     Click View Info My Wishlists
     Click View Info My Credit Slips
     Click View Info My Addresses
-    # Click Add Address
+    Click Add Address
     Click Update Addresses
     Click View Info My Personal Information 
     [Teardown]            Close Browser

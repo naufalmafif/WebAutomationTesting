@@ -4,7 +4,7 @@ Variables             ../resources/registerpage_locators.yaml
 
 *** Variables ***
 ${HOMEPAGE_URL}     http://automationpractice.com/index.php
-${email}            membuatakunbaru4@gmail.com
+${email}            membuatakunbaru7@gmail.com
 ${firstname1}        berbuat
 ${lastname2}         baik
 ${password}         inipassword

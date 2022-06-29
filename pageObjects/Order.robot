@@ -6,6 +6,7 @@ Variables             ../resources/orderpage_locators.yaml
 ${HOMEPAGE_URL}     http://automationpractice.com/index.php
 ${email}            membuatakunbaru@gmail.com
 ${password}         inipassword
+${item}             blouse
 
 *** Keywords ***
 Open Browser Chrome
@@ -16,9 +17,13 @@ Verify Current Url Is Homepage Url
     [Documentation]                 Verify current url is homepage url
     Location Should Be              ${HOMEPAGE_URL}
 
-I am Order Printed Dress to Click Image Product
-    [Documentation]                 I am Order Printed Dress to Click Image Product
-    Click Element                   ${click_product}
+I can input in search field
+    [Documentation]                 I can input in search field
+    Input Text                      ${search_field}     ${item}
+
+I can click search icon
+    [Documentation]                 I can click search icon
+    Click Element                   ${search_button}  
 
 I Click Button Add Cart to Order Printed Dress
     [Documentation]                 I Click Button Add Cart to Order Printed Dress

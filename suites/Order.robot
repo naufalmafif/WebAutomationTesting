@@ -7,7 +7,9 @@ Resource            ../pageObjects/Order.robot
 User Should Be Able To See Order.
     [Documentation]       Test to verify that user should be able to see Order
     [Setup]               Open Browser Chrome
-    I am Order Printed Dress to Click Image Product
+    # I am Order Printed Dress to Click Image Product
+    I can input in search field
+    I can click search icon
     I Click Button Add Cart to Order Printed Dress
     I am Continue Proceed to Checkout Order
     I am Proceed to Checkout Order from Cart Summary

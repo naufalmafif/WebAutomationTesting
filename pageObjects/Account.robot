@@ -10,13 +10,19 @@ ${name}             favorite items
 ${firstname}        joni
 ${lastname}         yes papa
 ${address}          Sukatani barat utara selatan 
+${address1}         Braga Chava Dave
 ${city}             Bandung
+${city1}            Soreang    
 ${state}            16
 ${postcode}         41854
+${postal}           88877
 ${country}          0
 ${hp}               0214122181
+${home_phone}       88889999
+${phone_mobile}     0899991111
 ${pm}               0848784852
-${alias}            Apartement
+${alias}            Rusun
+${alias1}           Kantor1
 
 *** Keywords ***
 Open Browser Chrome
@@ -60,6 +66,15 @@ Click Add Address
     [Documentation]                 Click Add Address
     Click Element                   ${add_address}
     Input Text                      ${id_firstname}                         ${firstname}
+    Input Text                      ${id_lastname}                          ${lastname}
+    Input Text                      ${id_address}                           ${address1}
+    Input Text                      ${id_city}                              ${city1}
+    Select From List By Index       ${id_state}                             6
+    Input Text                      ${id_postcode}                          ${postal}
+    Select From List By Index       ${id_country}                           0
+    Input Text                      ${id_hp}                                ${home_phone}
+    Input Text                      ${id_pm}                                ${phone_mobile}
+    Input Text                      ${id_alias}                             ${alias1}
     Click Element                   ${save_button}
 
 Click Update Addresses

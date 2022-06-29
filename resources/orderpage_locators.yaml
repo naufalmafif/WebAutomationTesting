@@ -1,4 +1,6 @@
 click_product: //*[@alt="Printed Dress"]
+search_field: //input[@id="search_query_top"]
+search_button: //button[@name="submit_search"]
 add_cart: //*[@id="add_to_cart"]
 proceed_button: //*[@title="Proceed to checkout"]
 cart_summary: //*[@id="cart_title"]

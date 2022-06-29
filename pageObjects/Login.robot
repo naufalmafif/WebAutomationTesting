@@ -19,6 +19,9 @@ Verify Current Url Is Homepage Url
 I Click Button Sign In to Login
     [Documentation]             I Click Button Sign In to Login
     Click Element               ${signin_button}
+
+Verify Authentication menu login 
+    [Documentation]             Verify Authentication menu login
     Element Should Be Visible   ${authentication_login}
 
 I am Typing Email address in the Field Signin Form
