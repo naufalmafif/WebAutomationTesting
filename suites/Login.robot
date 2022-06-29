@@ -25,7 +25,6 @@ User Should Be Able To Login With Invalid Data
     Input User Email Address        user_email=${INVALID_EMAIL}
     Input User Password Email       user_password=${PASSWORD}
     Click SignIn Button
-    # Verify Error Message Appears    error_type=invalid    
 
 User Should Be Able To Login With Unregistered Data
     [Documentation]         Test to verify that user should be able to Login with unregistered data
@@ -33,4 +32,4 @@ User Should Be Able To Login With Unregistered Data
     Input User Email Address        user_email=${UNREGISTERED_EMAIL}
     Input User Password Email       user_password=${PASSWORD}
     Click SignIn Button
-    # Verify Error Message Appears    error_type=unregistered
+    
