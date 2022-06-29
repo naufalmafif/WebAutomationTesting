@@ -10,6 +10,7 @@ ${HOMEPAGE_URL}     http://automationpractice.com/index.php
 Navigate To Homepage
     [Documentation]                         Keyword to Navigate user to Homepage
     Go To                                   ${HOMEPAGE_URL}
+    Maximize Browser Window
 
 Verify Current Url Is Homepage Url
     [Documentation]             Verify current url is homepage url

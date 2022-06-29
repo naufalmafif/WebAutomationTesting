@@ -14,6 +14,7 @@ ${PASSWORD}                 inipassword
 Navigate To Login Page
     [Documentation]                         Keyword to Navigate user to Login Page
     Go To                                   ${LOGIN_URL}
+    Maximize Browser Window
 
 Verify Current Url Is Login Url
     [Documentation]                         Keyword to verify current url is login url

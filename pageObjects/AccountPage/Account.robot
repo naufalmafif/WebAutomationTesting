@@ -4,60 +4,64 @@ Variables             accountpage_locators.yaml
 Resource              ../Base.robot
 
 *** Variables ***
-${HOMEPAGE_URL}     http://automationpractice.com/index.php
-${email}            membuatakunbaru@gmail.com
-${password}         inipassword
-${name}             favorite items
-${firstname}        joni
-${lastname}         yes papa
-${address}          Sukatani barat utara selatan 
-${address1}         Braga Chava Dave
-${city}             Bandung
-${city1}            Soreang    
-${state}            16
-${postcode}         41854
-${postal}           88877
-${country}          0
-${hp}               0214122181
-${home_phone}       88889999
-${phone_mobile}     0899991111
-${pm}               0848784852
-${alias}            Rusun
-${alias1}           Kantor1
+${ACCOUNT_URL}      http://automationpractice.com/index.php
+${email1}            membuatakunbaru@gmail.com
+${password1}         inipassword
+${name1}             favorite items
+${firstname1}        joni
+${lastname1}         yes papa
+${address1}          Sukatani barat utara selatan 
+${address2}         Braga Chava Dave
+${city1}             Bandung
+${city2}            Soreang    
+${state1}            16
+${postcode1}         41854
+${postal1}           88877
+${country1}          0
+${hp1}               0214122181
+${home_phone1}       88889999
+${phone_mobile1}     0899991111
+${pm1}               0848784852
+${alias1}            Rusun
+${alias2}           Kantor1
 
 *** Keywords ***
-Open Browser Chrome
-    Open Browser        browser=chrome    url=${HOMEPAGE_URL}
+Navigate To Account
+    [Documentation]                  Keyword to Navigate user to Account
+    Go To                            ${ACCOUNT_URL}
     Maximize Browser Window
-
-Verify Current Url Is Homepage Url
-    [Documentation]                 Verify current url is homepage url
-    Location Should Be              ${HOMEPAGE_URL}
 
 Click Button Sign In to Login
     [Documentation]                 Click Button Sign In to Login
     Click Element                   ${signin_button}
-    Element Should Be Visible       ${authentication_login}
+
+Input Text Email
+    [Arguments]                     ${email}
     Input Text                      ${id_email}                             ${email}
+
+Input Passord Email
+    [Arguments]                     ${password}
     Input Text                      ${id_password}                          ${password}
+
+Click SignIn Button
     Click Element                   ${id_submitLogin}
+    Wait Until Element Is Visible   ${info_orders}
 
 Click View Info My Orders
     [Documentation]                 Click View Info My Orders
     Click Element                   ${info_orders}
-    Click Element                   ${back_account}
 
 Click View Info My Wishlists
     [Documentation]                 Click View Info My Wishlists
+    [Arguments]                     ${name}
     Click Element                   ${info_wishlist}
-    Input Text                      ${id_name}                              ${name}
+    Input Text                      ${id_name}                              ${name1}
     Click Element                   ${id_submit}
-    Click Element                   ${back_account}
+   
 
 Click View Info My Credit Slips
     [Documentation]                 Click View Info My Credit Slips
     Click Element                   ${info_creditSlip}
-    Click Element                   ${back_account}
 
 Click View Info My Addresses
     [Documentation]                 Click View Info My Addresses
@@ -66,38 +70,60 @@ Click View Info My Addresses
 Click Add Address
     [Documentation]                 Click Add Address
     Click Element                   ${add_address}
-    Input Text                      ${id_firstname}                         ${firstname}
-    Input Text                      ${id_lastname}                          ${lastname}
-    Input Text                      ${id_address}                           ${address1}
-    Input Text                      ${id_city}                              ${city1}
-    Select From List By Index       ${id_state}                             6
-    Input Text                      ${id_postcode}                          ${postal}
-    Select From List By Index       ${id_country}                           0
-    Input Text                      ${id_hp}                                ${home_phone}
-    Input Text                      ${id_pm}                                ${phone_mobile}
-    Input Text                      ${id_alias}                             ${alias1}
-    Click Element                   ${save_button}
 
-Click Update Addresses
-    [Documentation]                 Click Update Addresses
-    Click Element                   ${update_address}
-    Wait Until Element Is Visible   ${id_firstname}
-    Input Text                      ${id_firstname}                ${firstname}
-    Input Text                      ${id_address}                  ${address}
-    Input Text                      ${id_city}                     ${city}
-    Select From List By Index       ${id_state}                    ${state}
-    Input Text                      ${id_postcode}                 ${postcode}
-    Select From List By Index       ${id_country}                  ${country}
-    Input Text                      ${id_hp}                       ${hp}
-    Input Text                      ${id_pm}                       ${pm}
-    Input Text                      ${id_alias}                    ${alias}
+Input Firstname
+    [Documentation]                 Input Firstname
+    [Arguments]                     ${firstname}
+    Input Text                      ${id_firstname}                         ${firstname}
+
+Input Lastname
+    [Documentation]                 Input lastname
+    [Arguments]                     ${lastname}
+    Input Text                      ${id_lastname}                          ${lastname}
+
+Input Address 1
+    [Documentation]                 Input address 1
+    [Arguments]                     ${address}
+    Input Text                      ${id_address}                           ${address}
+
+Input City
+    [Documentation]                 Input City
+    [Arguments]                     ${city}
+    Input Text                      ${id_city}                              ${city}
+
+Select State
+    [Documentation]                 Select State
+    Select From List By Index       ${id_state}                             6
+
+Input Postal
+    [Documentation]                 Input Postal
+    [Arguments]                     ${postal}
+    Input Text                      ${id_postcode}                          ${postal}
+
+Select Country
+    [Documentation]                 Select Country
+    Select From List By Index       ${id_country}                           0
+
+Input Home phone
+    [Documentation]                 Input Home Phone
+    [Arguments]                     ${home_phone}
+    Input Text                      ${id_hp}                                ${home_phone}
+
+Input phone mobile                  
+    [Documentation]                 Input Phone mobile
+    [Arguments]                     ${phone_mobile}
+    Input Text                      ${id_pm}                                ${phone_mobile}
+
+Input alias
+    [Documentation]                 Input alias
+    [Arguments]                     ${alias}
+    Input Text                      ${id_alias}                             ${alias1}
+
+Click Save Button
+    [Documentation]                 Click save button
     Click Element                   ${save_button}
-    Click Element                   ${back_account}
 
 Click View Info My Personal Information 
     [Documentation]                 Click View Info My Personal Information
     Click Element                   ${info_personal}
-    Input Text                      ${id_firstname}                ${firstname}
-    Input Text                      ${id_lastname}                 ${lastname}
-    Click Element                   ${back_account}
 

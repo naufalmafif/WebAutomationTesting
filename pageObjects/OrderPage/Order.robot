@@ -1,29 +1,50 @@
 *** Settings ***
 Documentation         Order related keyword
-Variables             ../resources/orderpage_locators.yaml
+Resource              ../Base.robot
+Variables             orderpage_locators.yaml
 
 *** Variables ***
-${HOMEPAGE_URL}     http://automationpractice.com/index.php
-${email}            membuatakunbaru@gmail.com
-${password}         inipassword
-${item}             blouse
+${ORDER_URL}                http://automationpractice.com/index.php?controller=order
+${email_address}            membuatakunbaru@gmail.com
+${password_email}           inipassword
+${item_search}              printed dress
 
 *** Keywords ***
-Open Browser Chrome
-    Open Browser        browser=chrome    url=${HOMEPAGE_URL}
+Navigate To Order
+    [Documentation]                 Keyword to Navigate user to Register
+    Go To                           ${ORDER_URL}
     Maximize Browser Window
 
-Verify Current Url Is Homepage Url
-    [Documentation]                 Verify current url is homepage url
-    Location Should Be              ${HOMEPAGE_URL}
+User has successfully logged in
+    [Documentation]                 Keyword to User has successfully logged in
+    Click Element                   ${click_signin}
 
-I can input in search field
+Input Email to Sign in
+    [Documentation]                 I am Input Email to Sign in
+    [Arguments]                     ${id_email} 
+    Input Text                      ${nama_email}                            ${id_email}
+
+Input Password Email 
+    [Documentation]                 Keyword to Input password email
+    [Arguments]                     ${id_password}
+    Input Text                      ${nama_password}                         ${id_password}
+
+Click Sign In Button
+    [Documentation]                 Keyword to click sign in button
+    Click Element                   ${signin_button}
+
+input in search field
     [Documentation]                 I can input in search field
-    Input Text                      ${search_field}     ${item}
+    [Arguments]                     ${search_item}
+    Input Text                      ${search_field}     ${search_item}
 
 I can click search icon
     [Documentation]                 I can click search icon
     Click Element                   ${search_button}  
+
+I Click Add to Cart Item Printed Dress
+    [Documentation]                 I click add to cart item printed dress
+    Click Element                   ${click_item}
 
 I Click Button Add Cart to Order Printed Dress
     [Documentation]                 I Click Button Add Cart to Order Printed Dress
@@ -31,7 +52,7 @@ I Click Button Add Cart to Order Printed Dress
 
 I am Continue Proceed to Checkout Order
     [Documentation]                 I am Continue Proceed to Checkout Order 
-    Wait Until Element Is Visible   ${proceed_button}
+    Wait Until Element Is Visible   ${proceed_button}           
     Click Element                   ${proceed_button}
     Element Should Be Visible       ${cart_summary}
 
@@ -40,12 +61,6 @@ I am Proceed to Checkout Order from Cart Summary
     Wait Until Element Is Visible   ${checkout_button}
     Click Element                   ${checkout_button}
     Element Should Be Visible       ${order_step}
-
-I am Authentication to Sign in 
-    [Documentation]                 I am Authentication to Sign in 
-    Input Text                      ${email}                            ${email}
-    Input Text                      ${password}                         ${password}
-    Click Element                   ${signin_button}
 
 I am Select Delivery Address
     [Documentation]                 I am Select Delivery Address
