@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation         Account related keyword
-Variables             ../resources/accountpage_locators.yaml
+Variables             accountpage_locators.yaml
+Resource              ../Base.robot
 
 *** Variables ***
 ${HOMEPAGE_URL}     http://automationpractice.com/index.php

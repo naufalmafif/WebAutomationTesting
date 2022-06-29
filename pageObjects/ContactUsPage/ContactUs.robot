@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation           Contact Us related keyword
-Variables               ../resources/contactuspage_locators.yaml
+Variables               contactuspage_locators.yaml
 
 *** Variables ***
 ${HOMEPAGE_URL}         http://automationpractice.com/index.php

@@ -1,22 +1,27 @@
 *** Settings ***
 Documentation         Homepage related keyword
-Variables             ../resources/homepage_locators.yaml
+Resource              ../Base.robot
+Variables             homepage_locators.yaml
 
 *** Variables ***
 ${HOMEPAGE_URL}     http://automationpractice.com/index.php
 
 *** Keywords ***
-Open Browser Chrome
-    Open Browser        browser=chrome    url=${HOMEPAGE_URL}
-    Maximize Browser Window
+Navigate To Homepage
+    [Documentation]                         Keyword to Navigate user to Homepage
+    Go To                                   ${HOMEPAGE_URL}
 
 Verify Current Url Is Homepage Url
     [Documentation]             Verify current url is homepage url
     Location Should Be          ${HOMEPAGE_URL}
 
-Verify Homepage Header Appears
-    [Documentation]             Verify Homepage Header Appears
-    Element Should Be Visible   ${header_homepage}
+Verify Banner Appears
+    [Documentation]             Verify banner Appears
+    Element Should Be Visible   ${banner_homepage}
+
+Verify Logo Appears
+    [Documentation]             Verify Logo Appears
+    Element Should Be Visible   ${logo_homepage}
 
 Verify Contact Us Button Appears
     [Documentation]             Verify Homepage Contact Us Button Appears
@@ -25,10 +30,6 @@ Verify Contact Us Button Appears
 Verify Sign in Button Appears
     [Documentation]             Verify Homepage Sign in Button Appears
     Element Should Be Visible   ${signin_button}
-
-Verify Homepage Title Logo Appears
-    [Documentation]             Verify homepage title appears
-    Element Should Be Visible   ${titlelogo_homepage}
 
 Verify Search Button Appears
     [Documentation]             Verify Homepage Search Button Appears
