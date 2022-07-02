@@ -12,7 +12,7 @@ User Should Be Able To See Register.
     Navigate To Register
     I Create an Account to Register Form                                                    user_email=${emailBaru}
     I Click Radio Button Title
-    I am Typing First Name in the Field Register Form                                       First_Name=${firstname_baru}        
+    I am Typing First Name in the Field Register Form                                       First_Name=${firstname_baru}       
     I am Typing Last Name in the Field Register Form                                        Last_Name=${lastname_baru}
     I am Typing Email in the Field Register Form                                            user_email=${emailBaru}
     I am Typing Password in the Field Register Form                                         user_password=${passwordBaru}

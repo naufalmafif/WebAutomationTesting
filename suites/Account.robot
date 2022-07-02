@@ -41,19 +41,8 @@ User Should Be Able To See Account View Info My Addresses.
     Input Passord Email                                 password=${password1}    
     Click SignIn Button 
     Click View Info My Addresses
-    
-User Should Be Able To See Account View Info My Personal Information.
-    [Documentation]       Test to verify that user should be able to see Account View Info My Personal Information
-    Navigate To Account
-    Click Button Sign In to Login
-    Input Text Email                                    email=${email1}
-    Input Passord Email                                 password=${password1}    
-    Click SignIn Button 
-    Click View Info My Personal Information 
-    Input Firstname                                     firstname=${firstname1}
-    Input Lastname                                      lastname=${lastname1}
-   
-User Should Be Able To See Create new Address
+
+ User Should Be Able To See Create new Address
     [Documentation]     Test to User Should Be Able To See create new address
     Navigate To Account
     Click Button Sign In to Login
@@ -73,3 +62,16 @@ User Should Be Able To See Create new Address
     Input phone mobile                                  phone_mobile=${phone_mobile1}
     Input alias                                         alias=${alias1}
     Click Save Button
+       
+User Should Be Able To See Account View Info My Personal Information.
+    [Documentation]       Test to verify that user should be able to see Account View Info My Personal Information
+    Navigate To Account
+    Click Button Sign In to Login
+    Input Text Email                                    email=${email1}
+    Input Passord Email                                 password=${password1}    
+    Click SignIn Button 
+    Click View Info My Personal Information 
+    Input Firstname                                     firstname=${firstname1}
+    Input Lastname                                      lastname=${lastname1}
+   
+

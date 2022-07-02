@@ -8,4 +8,4 @@ ${HOMEPAGE_URL}     http://automationpractice.com/index.php
 *** Keywords ***
 Open Chrome Browser
     [Documentation]         Keyword to open browser with chrome
-    Open Browser            browser=chrome      url=${HOMEPAGE_URL}
+    Open Browser            browser=headlesschrome      url=${HOMEPAGE_URL}

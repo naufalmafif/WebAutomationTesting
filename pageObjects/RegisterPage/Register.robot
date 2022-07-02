@@ -7,8 +7,8 @@ Variables             registerpage_locators.yaml
 *** Variables ***
 ${REGISTER_URL}     http://automationpractice.com/index.php?controller=authentication&back=my-account
 ${emailBaru}        membuatakunbaru98@gmail.com
-${firstname_baru}      berbuatlah baik
-${lastname_baru}       kepada orangtua
+${firstname_baru}   berbuatlah baik 1
+${lastname_baru}    kepada orangtua 1
 ${passwordBaru}     inipassword
 ${company_name1}    PT. Pacific East Company
 ${address1}         Pasir Putih Selatan

@@ -5,6 +5,7 @@ Variables             orderpage_locators.yaml
 
 *** Variables ***
 ${ORDER_URL}                http://automationpractice.com/index.php?controller=order
+${CHECKOUT_URL}             http://automationpractice.com/index.php?controller=order
 ${email_address}            membuatakunbaru@gmail.com
 ${password_email}           inipassword
 ${item_search}              printed dress
@@ -42,13 +43,17 @@ I can click search icon
     [Documentation]                 I can click search icon
     Click Element                   ${search_button}  
 
-I Click Add to Cart Item Printed Dress
+I Click Item Printed Dress
     [Documentation]                 I click add to cart item printed dress
     Click Element                   ${click_item}
 
 I Click Button Add Cart to Order Printed Dress
-    [Documentation]                 I Click Button Add Cart to Order Printed Dress
+    [Documentation]                 I Click Button Add Cart to Order Printed Dress 
     Click Element                   ${add_cart}
+
+Navigate To Checkout Order
+    [Documentation]                 Keyword to Navigate user to Checkout Order
+    Go To                           ${CHECKOUT_URL}
 
 I am Continue Proceed to Checkout Order
     [Documentation]                 I am Continue Proceed to Checkout Order 
@@ -65,13 +70,11 @@ I am Proceed to Checkout Order from Cart Summary
 I am Select Delivery Address
     [Documentation]                 I am Select Delivery Address
     Click Element                   ${process_address}
-    Wait Until Element Is Visible   ${process_address}
 
 I Choose a Shipping Option
     [Documentation]                 I Choose a Shipping Option
-    
     Click Element                   ${checkbox}
-    Element Should Be Visible       ${process_carrier}
+    Click Element                   ${process_carrier}
 
 I Choose Payment Method
     [Documentation]                 I Choose Payment Method

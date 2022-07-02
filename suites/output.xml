@@ -1,149 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220630 00:42:37.083" rpa="false" schemaversion="3">
-<suite id="s1" name="Order" source="F:\Dojobox\Demo\WebAutomationTesting\suites\order.robot">
-<test id="s1-t1" name="User Should Be Able To Purchase Order." line="10">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220702 19:51:58.009" rpa="false" schemaversion="3">
+<suite id="s1" name="Register" source="F:\Dojobox\Demo\WebAutomationTesting\suites\register.robot">
+<test id="s1-t1" name="User Should Be Able To See Register." line="10">
 <kw name="Open Chrome Browser" library="Base" type="SETUP">
 <doc>Keyword to open browser with chrome</doc>
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=chrome</arg>
+<arg>browser=headlesschrome</arg>
 <arg>url=${HOMEPAGE_URL}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220630 00:42:37.485" level="INFO">Opening browser 'chrome' to base url 'http://automationpractice.com/index.php'.</msg>
-<status status="PASS" starttime="20220630 00:42:37.483" endtime="20220630 00:42:47.925"/>
+<msg timestamp="20220702 19:51:58.355" level="INFO">Opening browser 'headlesschrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20220702 19:51:58.355" endtime="20220702 19:52:05.732"/>
 </kw>
-<status status="PASS" starttime="20220630 00:42:37.482" endtime="20220630 00:42:47.925"/>
+<status status="PASS" starttime="20220702 19:51:58.353" endtime="20220702 19:52:05.732"/>
 </kw>
-<kw name="Navigate To Order" library="Order">
+<kw name="Navigate To Register" library="Register">
 <doc>Keyword to Navigate user to Register</doc>
 <kw name="Go To" library="SeleniumLibrary">
-<arg>${ORDER_URL}</arg>
+<arg>${REGISTER_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220630 00:42:47.927" level="INFO">Opening url 'http://automationpractice.com/index.php?controller=order'</msg>
-<status status="PASS" starttime="20220630 00:42:47.927" endtime="20220630 00:42:49.745"/>
+<msg timestamp="20220702 19:52:05.734" level="INFO">Opening url 'http://automationpractice.com/index.php?controller=authentication&amp;back=my-account'</msg>
+<status status="PASS" starttime="20220702 19:52:05.734" endtime="20220702 19:52:07.006"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220630 00:42:49.745" endtime="20220630 00:42:49.953"/>
+<status status="PASS" starttime="20220702 19:52:07.006" endtime="20220702 19:52:07.123"/>
 </kw>
-<status status="PASS" starttime="20220630 00:42:47.926" endtime="20220630 00:42:49.954"/>
+<status status="PASS" starttime="20220702 19:52:05.733" endtime="20220702 19:52:07.124"/>
 </kw>
-<kw name="User has successfully logged in" library="Order">
-<doc>Keyword to User has successfully logged in</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${click_signin}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220630 00:42:49.957" level="INFO">Clicking element '//*[@class="login"]'.</msg>
-<status status="PASS" starttime="20220630 00:42:49.957" endtime="20220630 00:42:54.046"/>
-</kw>
-<status status="PASS" starttime="20220630 00:42:49.956" endtime="20220630 00:42:54.046"/>
-</kw>
-<kw name="Input Email to Sign in" library="Order">
-<arg>id_email=${email_address}</arg>
-<doc>I am Input Email to Sign in</doc>
+<kw name="I Create an Account to Register Form" library="Register">
+<arg>user_email=${emailBaru}</arg>
+<doc>I Create an Account to Register Form</doc>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${nama_email}</arg>
-<arg>${id_email}</arg>
+<arg>${emailcreate_form}</arg>
+<arg>${user_email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220630 00:42:54.049" level="INFO">Typing text 'membuatakunbaru@gmail.com' into text field '//*[@id="email"]'.</msg>
-<status status="PASS" starttime="20220630 00:42:54.048" endtime="20220630 00:42:54.291"/>
+<msg timestamp="20220702 19:52:07.126" level="INFO">Typing text 'membuatakunbaru98@gmail.com' into text field '//*[@id="email_create"]'.</msg>
+<status status="PASS" starttime="20220702 19:52:07.125" endtime="20220702 19:52:07.268"/>
 </kw>
-<status status="PASS" starttime="20220630 00:42:54.047" endtime="20220630 00:42:54.292"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${submitcreate_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220702 19:52:07.269" level="INFO">Clicking element '//*[@class="btn btn-default button button-medium exclusive"]'.</msg>
+<status status="PASS" starttime="20220702 19:52:07.268" endtime="20220702 19:52:07.335"/>
 </kw>
-<kw name="Input Password Email" library="Order">
-<arg>id_password=${password_email}</arg>
-<doc>Keyword to Input password email</doc>
+<status status="PASS" starttime="20220702 19:52:07.124" endtime="20220702 19:52:07.336"/>
+</kw>
+<kw name="I Click Radio Button Title" library="Register">
+<doc>I Click Radio Button Title</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${id_gender}</arg>
+<arg>8s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220702 19:52:07.337" endtime="20220702 19:52:09.723"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${id_gender}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220702 19:52:09.723" level="INFO">Clicking element '//*[@id="uniform-id_gender1"]'.</msg>
+<status status="PASS" starttime="20220702 19:52:09.723" endtime="20220702 19:52:09.774"/>
+</kw>
+<status status="PASS" starttime="20220702 19:52:07.337" endtime="20220702 19:52:09.774"/>
+</kw>
+<kw name="I am Typing First Name in the Field Register Form" library="Register">
+<arg>First_Name=${firstname_baru}</arg>
+<doc>I am Typing First Name in the Field Register Form</doc>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${nama_password}</arg>
-<arg>${id_password}</arg>
+<arg>${firstName_}</arg>
+<arg>${First_Name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220630 00:42:54.296" level="INFO">Typing text 'inipassword' into text field '//*[@id="passwd"]'.</msg>
-<status status="PASS" starttime="20220630 00:42:54.295" endtime="20220630 00:42:54.491"/>
+<msg timestamp="20220702 19:52:09.775" level="INFO">Typing text 'berbuatlah baik 1' into text field 'berbuatlah baik 1'.</msg>
+<msg timestamp="20220702 19:52:09.902" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-287.png"&gt;&lt;img src="selenium-screenshot-287.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220702 19:52:09.903" level="FAIL">Element with locator 'berbuatlah baik 1' not found.</msg>
+<status status="FAIL" starttime="20220702 19:52:09.775" endtime="20220702 19:52:09.905"/>
 </kw>
-<status status="PASS" starttime="20220630 00:42:54.294" endtime="20220630 00:42:54.491"/>
+<status status="FAIL" starttime="20220702 19:52:09.774" endtime="20220702 19:52:09.906"/>
 </kw>
-<kw name="Click Sign In Button" library="Order">
-<doc>Keyword to click sign in button</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${signin_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220630 00:42:54.497" level="INFO">Clicking element '//*[@id="SubmitLogin"]'.</msg>
-<status status="PASS" starttime="20220630 00:42:54.496" endtime="20220630 00:42:56.903"/>
+<kw name="I am Typing Last Name in the Field Register Form" library="Register">
+<arg>Last_Name=${lastname_baru}</arg>
+<doc>I am Typing Last Name in the Field Register Form</doc>
+<status status="NOT RUN" starttime="20220702 19:52:09.907" endtime="20220702 19:52:09.908"/>
 </kw>
-<status status="PASS" starttime="20220630 00:42:54.495" endtime="20220630 00:42:56.903"/>
+<kw name="I am Typing Email in the Field Register Form" library="Register">
+<arg>user_email=${emailBaru}</arg>
+<doc>I am Typing Email in the Field Register Form</doc>
+<status status="NOT RUN" starttime="20220702 19:52:09.908" endtime="20220702 19:52:09.908"/>
 </kw>
-<kw name="input in search field" library="Order">
-<arg>search_item=${item_search}</arg>
-<doc>I can input in search field</doc>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${search_field}</arg>
-<arg>${search_item}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220630 00:42:56.907" level="INFO">Typing text 'printed dress' into text field '//input[@id="search_query_top"]'.</msg>
-<status status="PASS" starttime="20220630 00:42:56.906" endtime="20220630 00:42:57.166"/>
+<kw name="I am Typing Password in the Field Register Form" library="Register">
+<arg>user_password=${passwordBaru}</arg>
+<doc>I am Typing Password in the Field Register Form</doc>
+<status status="NOT RUN" starttime="20220702 19:52:09.909" endtime="20220702 19:52:09.909"/>
 </kw>
-<status status="PASS" starttime="20220630 00:42:56.904" endtime="20220630 00:42:57.166"/>
+<kw name="I am Select Date of Birth Dropdown" library="Register">
+<doc>I am Select Days on Date of Birth Dropdown</doc>
+<status status="NOT RUN" starttime="20220702 19:52:09.910" endtime="20220702 19:52:09.910"/>
 </kw>
-<kw name="I can click search icon" library="Order">
-<doc>I can click search icon</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${search_button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220630 00:42:57.169" level="INFO">Clicking element '//button[@name="submit_search"]'.</msg>
-<status status="PASS" starttime="20220630 00:42:57.168" endtime="20220630 00:42:59.706"/>
+<kw name="I am Select checkbox of Sign up for our newsletter!" library="Register">
+<doc>I am Select checkbox of Sign up for our newsletter!</doc>
+<status status="NOT RUN" starttime="20220702 19:52:09.910" endtime="20220702 19:52:09.911"/>
 </kw>
-<status status="PASS" starttime="20220630 00:42:57.167" endtime="20220630 00:42:59.706"/>
+<kw name="I am Select checkbox of Receive special offers from our partners!" library="Register">
+<doc>I am Select checkbox of Receive special offers from our partners!</doc>
+<status status="NOT RUN" starttime="20220702 19:52:09.911" endtime="20220702 19:52:09.911"/>
 </kw>
-<kw name="I Click Button Add Cart to Order Printed Dress" library="Order">
-<doc>I Click Button Add Cart to Order Printed Dress</doc>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${add_cart}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220630 00:42:59.709" level="INFO">Clicking element '//[@id="add_to_cart"]'.</msg>
-<msg timestamp="20220630 00:42:59.900" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-243.png"&gt;&lt;img src="selenium-screenshot-243.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220630 00:42:59.901" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //[@id="add_to_cart"] because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//[@id="add_to_cart"]' is not a valid XPath expression.
-  (Session info: chrome=102.0.5005.115)
-</msg>
-<status status="FAIL" starttime="20220630 00:42:59.708" endtime="20220630 00:42:59.906"/>
+<kw name="I am Typing Company in the Field Register Form" library="Register">
+<arg>company_name=${company_name1}</arg>
+<doc>I am Typing Company in the Field Register Form</doc>
+<status status="NOT RUN" starttime="20220702 19:52:09.912" endtime="20220702 19:52:09.912"/>
 </kw>
-<status status="FAIL" starttime="20220630 00:42:59.707" endtime="20220630 00:42:59.910"/>
+<kw name="I am Typing Address in the Field Register Form" library="Register">
+<arg>address_name=${address1}</arg>
+<doc>I am Typing Address in the Field Register Form</doc>
+<status status="NOT RUN" starttime="20220702 19:52:09.913" endtime="20220702 19:52:09.913"/>
 </kw>
-<kw name="I am Continue Proceed to Checkout Order" library="Order">
-<doc>I am Continue Proceed to Checkout Order</doc>
-<status status="NOT RUN" starttime="20220630 00:42:59.912" endtime="20220630 00:42:59.912"/>
+<kw name="I am Typing Address - Line 2 in the Field Register Form" library="Register">
+<arg>address_name=${address2}</arg>
+<doc>I am Typing Address - Line 2 in the Field Register Form</doc>
+<status status="NOT RUN" starttime="20220702 19:52:09.913" endtime="20220702 19:52:09.914"/>
 </kw>
-<kw name="I am Proceed to Checkout Order from Cart Summary" library="Order">
-<doc>I am Proceed to Checkout Order from Cart Summary</doc>
-<status status="NOT RUN" starttime="20220630 00:42:59.912" endtime="20220630 00:42:59.913"/>
+<kw name="I am Typing City in the Field Register Form" library="Register">
+<arg>city_name=${city_name1}</arg>
+<doc>I am Typing City in the Field Register Form</doc>
+<status status="NOT RUN" starttime="20220702 19:52:09.914" endtime="20220702 19:52:09.915"/>
 </kw>
-<kw name="I am Select Delivery Address" library="Order">
-<doc>I am Select Delivery Address</doc>
-<status status="NOT RUN" starttime="20220630 00:42:59.913" endtime="20220630 00:42:59.913"/>
+<kw name="I am Select State in the Field Register Form" library="Register">
+<doc>I am Select State in the Field Register Form</doc>
+<status status="NOT RUN" starttime="20220702 19:52:09.915" endtime="20220702 19:52:09.915"/>
 </kw>
-<kw name="I Choose a Shipping Option" library="Order">
-<doc>I Choose a Shipping Option</doc>
-<status status="NOT RUN" starttime="20220630 00:42:59.914" endtime="20220630 00:42:59.914"/>
+<kw name="I am Typing Zip/Postal Code in the Field Register Form" library="Register">
+<arg>postal=${postal1}</arg>
+<doc>I am Typing Zip/Postal Code in the Field Register Form</doc>
+<status status="NOT RUN" starttime="20220702 19:52:09.916" endtime="20220702 19:52:09.916"/>
 </kw>
-<kw name="I Choose Payment Method" library="Order">
-<doc>I Choose Payment Method</doc>
-<status status="NOT RUN" starttime="20220630 00:42:59.915" endtime="20220630 00:42:59.915"/>
+<kw name="I am Select Country in the Field Register Form" library="Register">
+<doc>I am Select State in the Field Register Form</doc>
+<status status="NOT RUN" starttime="20220702 19:52:09.916" endtime="20220702 19:52:09.917"/>
 </kw>
-<kw name="I Confirm My Order" library="Order">
-<doc>I Confirm My Order</doc>
-<status status="NOT RUN" starttime="20220630 00:42:59.915" endtime="20220630 00:42:59.915"/>
+<kw name="I am Typing Additional information in the Field Register Form" library="Register">
+<arg>other_message=${other_message1}</arg>
+<doc>I am Typing Zip/Postal Code in the Field Register Form</doc>
+<status status="NOT RUN" starttime="20220702 19:52:09.917" endtime="20220702 19:52:09.917"/>
+</kw>
+<kw name="I am Typing Home phone in the Field Register Form" library="Register">
+<arg>home_phone=${home_phone1}</arg>
+<doc>I am Typing Home phone in the Field Register Form</doc>
+<status status="NOT RUN" starttime="20220702 19:52:09.917" endtime="20220702 19:52:09.917"/>
+</kw>
+<kw name="I am Typing Mobile Number in the Field Register Form" library="Register">
+<arg>mobile_phone=${mobile_phone1}</arg>
+<doc>I am Typing Mobile phone in the Field Register Form</doc>
+<status status="NOT RUN" starttime="20220702 19:52:09.918" endtime="20220702 19:52:09.918"/>
+</kw>
+<kw name="I am Typing Assign an address alias for future reference in the Field Register Form" library="Register">
+<arg>alias=${alias1}</arg>
+<doc>I am Typing Assign an address alias for future reference in the Field Register Form</doc>
+<status status="NOT RUN" starttime="20220702 19:52:09.918" endtime="20220702 19:52:09.918"/>
+</kw>
+<kw name="I Click Button Register to Submit Account" library="Register">
+<doc>I Click Button Register to Submit Account</doc>
+<status status="NOT RUN" starttime="20220702 19:52:09.919" endtime="20220702 19:52:09.919"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220630 00:42:59.916" endtime="20220630 00:43:02.120"/>
+<status status="PASS" starttime="20220702 19:52:09.921" endtime="20220702 19:52:12.022"/>
 </kw>
-<doc>Test case to user should be able to purchase order</doc>
-<status status="FAIL" starttime="20220630 00:42:37.480" endtime="20220630 00:43:02.121">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //[@id="add_to_cart"] because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//[@id="add_to_cart"]' is not a valid XPath expression.
-  (Session info: chrome=102.0.5005.115)
-</status>
+<doc>Test to verify that user should be able to see Register</doc>
+<status status="FAIL" starttime="20220702 19:51:58.351" endtime="20220702 19:52:12.022">Element with locator 'berbuatlah baik 1' not found.</status>
 </test>
-<doc>Order test cases</doc>
-<status status="FAIL" starttime="20220630 00:42:37.083" endtime="20220630 00:43:02.124"/>
+<doc>Register test cases</doc>
+<status status="FAIL" starttime="20220702 19:51:58.009" endtime="20220702 19:52:12.026"/>
 </suite>
 <statistics>
 <total>
@@ -152,7 +176,7 @@ SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//[@id="add
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Order">Order</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Register">Register</stat>
 </suite>
 </statistics>
 <errors>
