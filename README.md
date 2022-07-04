@@ -27,27 +27,27 @@ Pada Menu Homepage terdiri dari Test Case Verifikasi:
         verifikasi menu pada footer homepage
 
 Pada Menu Register terdiri dari Test Case Pembuatan akun:
-    Create an Account to Register Form
-    Click Radio Button Title
-    Input First Name in the Field Register Form 
-    Input Last Name in the Field Register Form 
-    Input Email in the Field Register Form
-    Input Password in the Field Register Form 
-    Select Date of Birth Dropdown
-    Click checkbox of Sign up for our newsletter!
-    Click checkbox of Receive special offers from our partners!
-    Input Company in the Field Register Form  
-    Input Address in the Field Register Form  
-    Input Address - Line 2 in the Field Register Form
-    Input City in the Field Register Form 
-    Select State in the Field Register Form
-    Input Zip/Postal Code in the Field Register Form 
-    Select Country in the Field Register Form
-    Input Additional information in the Field Register Form  
-    Input Home phone in the Field Register Form
-    Input Mobile Number in the Field Register Form    
-    Input Assign an address alias for future reference in the Field Register Form
-    Click Button Register to Submit Account
+- Create an Account to Register Form
+- Click Radio Button Title
+- Input First Name in the Field Register Form 
+- Input Last Name in the Field Register Form 
+- Input Email in the Field Register Form
+- Input Password in the Field Register Form 
+- Select Date of Birth Dropdown
+- Click checkbox of Sign up for our newsletter!
+- Click checkbox of Receive special offers from our partners!
+- Input Company in the Field Register Form  
+- Input Address in the Field Register Form  
+- Input Address - Line 2 in the Field Register Form
+- Input City in the Field Register Form 
+- Select State in the Field Register Form
+- Input Zip/Postal Code in the Field Register Form 
+- Select Country in the Field Register Form
+- Input Additional information in the Field Register Form  
+- Input Home phone in the Field Register Form
+- Input Mobile Number in the Field Register Form    
+- Input Assign an address alias for future reference in the Field Register Form
+- Click Button Register to Submit Account
 
 Pada Menu Login terdiri dari beberapa Test Case yaitu:
 - User Should Be Able To See Login Page
@@ -69,18 +69,18 @@ Pada Menu Login terdiri dari beberapa Test Case yaitu:
     mengklik tombol sign in
 
 Pada menu Order terdiri dari Test Case Purchase Order:
-    Berada pada halaman Order
-    melakukan pencarian order pada kolom search dengan menginputkan keyword yang dituju
-    mengklik tombol search
-    mengklik item yang dipilih
-    mengklik item kedalam cart/keranjang
-    mengklik tombol proccess checkout order
-    mengklik tombol checkout order dari halaman cart summary
-    melakukan sign in dengan menginputkan email dan password akun yang terdaftar
-    memilih alamat pengiriman
-    memilih kurir pengiriman
-    memilih metode pembayaran
-    mengklik tombol konfirmasi order
+- Berada pada halaman Order
+- melakukan pencarian order pada kolom search dengan menginputkan keyword yang dituju
+- mengklik tombol search
+- mengklik item yang dipilih
+- mengklik item kedalam cart/keranjang
+- mengklik tombol proccess checkout order
+- mengklik tombol checkout order dari halaman cart summary
+- melakukan sign in dengan menginputkan email dan password akun yang terdaftar
+- memilih alamat pengiriman
+- memilih kurir pengiriman
+- memilih metode pembayaran
+- mengklik tombol konfirmasi order
 
 Pada menu Account terdiri dari beberapa Test Case My Account:
 - User Should Be Able To See Account View Info My Orders.
@@ -131,10 +131,10 @@ Pada menu Account terdiri dari beberapa Test Case My Account:
     lalu klik tombol save
 
 Pada menu Contact Us terdiri dari Test Case Customer Service - Contact Us:
-    klik tombol contact us
-    pilih subject heading
-    inputkan email address
-    pilih order reference
-    pilih Attach File
-    inputkan Message
-    klik tombol Send
+- klik tombol contact us
+- pilih subject heading
+- inputkan email address
+- pilih order reference
+- pilih Attach File
+- inputkan Message
+- klik tombol Send
