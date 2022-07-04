@@ -40,13 +40,13 @@ I Click Radio Button Title
     
 I am Typing First Name in the Field Register Form
     [Documentation]                 I am Typing First Name in the Field Register Form
-    [Arguments]                     ${First_Name}
-    Input Text                      ${firstName_}                       ${First_Name}
+    [Arguments]                     ${firstname}
+    Input Text                      ${firstname_id}                       ${firstname}
 
 I am Typing Last Name in the Field Register Form
     [Documentation]                 I am Typing Last Name in the Field Register Form
-    [Arguments]                     ${Last_Name}
-    Input Text                      ${lastName_}                        ${Last_Name}
+    [Arguments]                     ${lastname}
+    Input Text                      ${lastname_id}                        ${lastname}
 
 I am Typing Email in the Field Register Form
     [Documentation]                 I am Typing Email in the Field Register Form
