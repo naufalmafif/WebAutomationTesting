@@ -3,27 +3,27 @@ Berikut panduan pengujian terhadap web automation testing
 terdiri dari pengujian menu homepage, register, login, order, account, contact us.
 
 Pada Menu Homepage terdiri dari Test Case Verifikasi:
-    - Verify Current Url Is Homepage Url
+- Verify Current Url Is Homepage Url
         verifikasi url yang di tuju yaitu homepage url
-    - Verify Banner Appears
+- Verify Banner Appears
         verifikasi banner yang ada pada header homepage
-    - Verify Logo Appears
+- Verify Logo Appears
         verifikasi logo yang terdapat pada bar menu logo homepage
-    - Verify Contact Us Button Appears
+- Verify Contact Us Button Appears
         verifikasi tombol contact us yang terdapat pada sebelah kanan bawah header homepage
-    - Verify Sign in Button Appears
+- Verify Sign in Button Appears
         verifikasi tombol sign in pada sebelah kanan bawah header
-    - Verify Search Button Appears
+- Verify Search Button Appears
         verifikasi tombol search yang ada pada bar pencarian homepage
-    - Verify Cart Button Appears
+- Verify Cart Button Appears
         verifikasi tombol cart pada body homepage
-    - Verify Category Women Button Appears
+- Verify Category Women Button Appears
         verifikasi tombol catergory Women pada body homepage
-    - Verify Homepage Popular Tab Appears
+- Verify Homepage Popular Tab Appears
         verifikasi tab menu popular pada body homepage
-    - Verify Homepage Best Seller Tab Appears
+- Verify Homepage Best Seller Tab Appears
         verifikasi tab Best Seller pada body homepage
-    - Verify Homepage Footer Appears
+- Verify Homepage Footer Appears
         verifikasi menu pada footer homepage
 
 Pada Menu Register terdiri dari Test Case Pembuatan akun:
